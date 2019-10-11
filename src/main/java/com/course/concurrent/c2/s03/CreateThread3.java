@@ -10,7 +10,7 @@ import java.util.concurrent.FutureTask;
 public class CreateThread3 {
 
     public static void main(String[] args) throws Exception {
-        Callable<String> callable = new GetThreadResult.MyCallable();
+        Callable<String> callable = new MyCallable();
         FutureTask<String> futureTask = new FutureTask(callable);
 
         new Thread(futureTask).start();
